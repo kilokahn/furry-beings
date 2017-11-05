@@ -31,4 +31,24 @@ class PartitionTest {
         List<Color> expected = Arrays.asList(RED, RED, RED, RED, WHITE, WHITE, WHITE, WHITE, WHITE, BLUE, BLUE, GREEN);
         assertEquals(expected, colors);
     }
+
+    @Test
+    void testSimpleOptimized() {
+        List<Color> colors = Arrays.asList(RED, RED, RED, WHITE, RED, BLUE, BLUE, RED, BLUE, WHITE, GREEN);
+        int pivotIndex = 3;
+        Partition p = new Partition();
+        p.partitionOptimized(pivotIndex, colors);
+        List<Color> expected = Arrays.asList(RED, RED, RED, RED, RED, WHITE, WHITE, BLUE, BLUE, GREEN, BLUE);
+        assertEquals(expected, colors);
+    }
+
+    @Test
+    void testComplexOptimized() {
+        List<Color> colors = Arrays.asList(RED, WHITE, RED, WHITE, RED, WHITE, BLUE, WHITE, BLUE, WHITE, RED, GREEN);
+        int pivotIndex = 3;
+        Partition p = new Partition();
+        p.partitionOptimized(pivotIndex, colors);
+        List<Color> expected = Arrays.asList(RED, RED, RED, RED, WHITE, WHITE, WHITE, WHITE, WHITE, BLUE, GREEN, BLUE);
+        assertEquals(expected, colors);
+    }
 }

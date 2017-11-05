@@ -34,4 +34,22 @@ class Partition {
             }
         }
     }
+
+    void partitionOptimized(int pivotIndex, List<Color> colors) {
+        Color pivot = colors.get(pivotIndex);
+        // smaller -> sublist(0,smaller)
+        // unclassified -> sublist(equal, largest)
+        // equal -> sublist(equal, largest)
+        // larger -> sublist(largest, size)
+        int smaller = 0, equal = 0, larger = colors.size();
+        while(equal < larger) {
+            if(colors.get(equal).rank < pivot.rank) {
+                Collections.swap(colors, smaller++, equal++);
+            } else if (colors.get(equal).rank == pivot.rank) {
+                equal++;
+            } else { //
+                Collections.swap(colors, --larger, equal);
+            }
+        }
+    }
 }
