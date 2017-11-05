@@ -1,4 +1,4 @@
-package com.kilo;
+package com.kilo.primitives;
 
 import org.junit.Test;
 import org.slf4j.Logger;

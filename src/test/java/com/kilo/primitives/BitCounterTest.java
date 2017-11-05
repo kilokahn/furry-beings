@@ -1,5 +1,6 @@
-package com.kilo;
+package com.kilo.primitives;
 
+import com.kilo.primitives.BitCounter;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 

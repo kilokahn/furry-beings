@@ -1,4 +1,4 @@
-package com.kilo;
+package com.kilo.primitives;
 
 class BitCounter {
 

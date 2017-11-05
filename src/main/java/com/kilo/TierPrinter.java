@@ -8,9 +8,9 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 
-public class TierPrinter {
+class TierPrinter {
 
-    public <T> List<List<T>> getTiers(Map<T, List<T>> inputMap) {
+    <T> List<List<T>> getTiers(Map<T, List<T>> inputMap) {
         Map<T, Integer> nodeToLevelMap = new HashMap<>();
         Set<T> unvisitedNodes = inputMap.keySet();
         while(!unvisitedNodes.isEmpty()) {
