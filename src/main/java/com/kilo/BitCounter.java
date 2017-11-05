@@ -2,7 +2,7 @@ package com.kilo;
 
 class BitCounter {
 
-    int countBits(int x) {
+    int countBits(long x) {
         int numBits = 0;
         while (x !=0) {
             numBits += (x & 1);
